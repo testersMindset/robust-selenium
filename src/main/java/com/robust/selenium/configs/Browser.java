@@ -1,4 +1,4 @@
-package com.robust.selenium.utils;
+package com.robust.selenium.configs;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

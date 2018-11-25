@@ -1,17 +1,29 @@
 package com.robust.selenium.home;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import com.robust.selenium.common.SeleniumHelper;
+import com.robust.selenium.configs.Browser;
+
+import cucumber.api.java.en.When;
+
 public class HomePageImpl {
-	
-	WebDriver webDriver;
-	
-	public HomePageImpl(WebDriver driver) {
-		this.webDriver = driver;
-	}
+
+	WebDriver webDriver = Browser.driver();
 
 	/*
-	 *	implement predefined page objects/methods from Page Classes. 
+	 * implement predefined page objects/methods from Page Classes.
 	 */
-	
+	@When("^I am landed into home page$")
+	public void validateHomePage() throws Exception {
+		HomePage home = new HomePage(webDriver);
+		Assert.assertTrue(home.headerLogo().isDisplayed());
+	}
+
+	@When("^currency is selected as '(.+)'$")
+	public void selectCurrency(String currencyType) {
+		HomePage home = new HomePage(webDriver);
+		SeleniumHelper.selectFromDropdownByVisibleText(home.currencySelect(), currencyType);
+	}
 }
