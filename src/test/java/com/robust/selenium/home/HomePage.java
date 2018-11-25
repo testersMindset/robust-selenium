@@ -10,7 +10,7 @@ public class HomePage extends Page {
 		super(driver);
 	}
 	
-	/**
+	/** 
 	 * add element with @FindBy annotations.
 	 * eg: 
 	 * @FindBy(id = "id_002")
