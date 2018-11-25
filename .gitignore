@@ -1,0 +1,9 @@
+/pom.properties
+/pom.xml
+.target
+.classpath
+.project
+.settings/
+target/
+/target/**
+/.classpath
