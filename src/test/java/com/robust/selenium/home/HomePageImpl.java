@@ -26,4 +26,11 @@ public class HomePageImpl {
 		HomePage home = new HomePage(webDriver);
 		SeleniumHelper.selectFromDropdownByVisibleText(home.currencySelect(), currencyType);
 	}
+	
+	@When("^I click to the Register Link$")
+	public void clickToRegisterLink() {
+		HomePage home = new HomePage(webDriver);
+		home.registerLink().click();
+	}
+	
 }

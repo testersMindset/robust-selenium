@@ -15,21 +15,30 @@ public class HomePage extends Page {
 	/**
 	 * add element with @FindBy annotations. eg:
 	 * 
-	 * @FindBy(id = "id_002") private WebElement textField;
+	 * @FindBy(id = "id_002") 
+	 * private WebElement textField;
 	 * 
 	 */
 
 	@FindBy(className = "header-logo")
 	private WebElement headerLogo;
 
-	public WebElement headerLogo() {
-		return headerLogo;
-	}
-
 	@FindBy(id = "customerCurrency")
 	private WebElement currencySelect;
+
+	@FindBy(linkText = "Register")
+	private WebElement registerLink;
+
+	public WebElement registerLink() {
+		return registerLink;
+	}
 
 	public WebElement currencySelect() {
 		return currencySelect;
 	}
+
+	public WebElement headerLogo() {
+		return headerLogo;
+	}
+
 }
