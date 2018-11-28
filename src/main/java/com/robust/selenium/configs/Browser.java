@@ -19,7 +19,5 @@ public class Browser {
 	public static void setDriverNull() {
 		webDriver = null;
 	}
-	
-	
 
 }

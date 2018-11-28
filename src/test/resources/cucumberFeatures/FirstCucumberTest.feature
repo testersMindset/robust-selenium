@@ -8,21 +8,24 @@ Feature: Title of your feature I want to use this template for my feature file
   @regressionTest
   Scenario Outline: select dropdown options validations
     Given I am landed into home page
-    And currency is selected as '<currency>'
+    And currency is selected as '<Cur>'
     And I click to the Register Link
-    Then I land into Register pages
+    Then I land into Register page
     And I fill in register info with below values:
-      | gender     | <gender>     |
-      | birthDay   | <birthDay>   |
-      | birthMonth | <birthMonth> |
-      | birthYear  | <birthYear>  |
-      | firstName  | <firstName>  |
-      | lastName   | <lastName>   |
-      | email      | <email>      |
+      | gender     | <Gender> |
+      | birthDay   | <Day>    |
+      | birthMonth | <Month>  |
+      | birthYear  | <Year>   |
+      | firstName  | <Name>   |
+      | lastName   | <Last>   |
+      | email      | <Email>  |
+    Then I click to computers link
 
     Examples: 
-      | currency  | gender | birthDay | birthMonth | birthYear | firstName | lastName | email                     |
-      | Euro      | male   |       12 | January    |      1923 | Robert    | Kasper   | abcd@testWithCucumber.com |
-      | US Dollar | female |       20 | March      |      1982 | Hanson    | Star     | xyz3@testWithCucumber.com |
-      | Euro      | male   |       12 | January    |      1923 | Robert    | Kasper   | abcd@testWithCucumber.com |
-      | US Dollar | female |       20 | March      |      1982 | Hanson    | Star     | xyz3@testWithCucumber.com |
+      | Cur       | Gender | Day | Month    | Year | Name   | Last   | Email                      |
+      | Euro      | male   |  12 | January  | 1923 | Robert | Kasper | abcd@testWithCucumber.com  |
+      | US Dollar | female |  20 | February | 1978 | Jenny  | Pierce | xyzzd@testWithCucumber.com |
+      | Euro      | male   |  12 | January  | 1923 | Robert | Kasper | abcd@testWithCucumber.com  |
+      | US Dollar | female |  20 | February | 1978 | Jenny  | Pierce | xyzzd@testWithCucumber.com |
+      | Euro      | male   |  12 | January  | 1923 | Robert | Kasper | abcd@testWithCucumber.com  |
+      | US Dollar | female |  20 | February | 1978 | Jenny  | Pierce | xyzzd@testWithCucumber.com |

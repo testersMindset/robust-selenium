@@ -74,4 +74,12 @@ public class RegisterPage extends Page {
 	public WebElement selectBirthYear() {
 		return selectBirthYear;
 	}
+
+	@FindBy(linkText = "Computers")
+	private WebElement computersLink;
+
+	public WebElement computersLink() {
+		return computersLink;
+	}
+
 }
