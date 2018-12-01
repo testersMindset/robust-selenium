@@ -11,10 +11,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.robust.selenium.configs.Browser;
 
 public class SeleniumHelper {
+
+	static Logger log = LoggerFactory.getLogger(SeleniumHelper.class);
 
 	public static WebElement waitForElementToBeDisplayed(WebDriver driver, WebElement element) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(5))
@@ -26,6 +30,7 @@ public class SeleniumHelper {
 	}
 
 	public static WebElement waitForElementToBeDisplayed(WebElement element) {
+		log.info("waiting for the element .. ");
 		return waitForElementToBeDisplayed(Browser.driver(), element);
 	}
 
@@ -39,12 +44,14 @@ public class SeleniumHelper {
 	}
 
 	public static WebElement waitForElementToBeClickable(WebElement element) {
+		log.info("waiting for the element..");
 		return waitForElementToBeClickable(Browser.driver(), element);
 	}
 
 	public static void selectFromDropdownByVisibleText(WebElement element, String text) {
 		WebElement elem = waitForElementToBeClickable(element);
 		Select select = new Select(elem);
+		log.info("selecting value " + text + " from dropdown.");
 		select.selectByVisibleText(text);
 	}
 
@@ -55,6 +62,7 @@ public class SeleniumHelper {
 	}
 
 	public static void moveToElement(WebElement element) {
+		log.info("hovering on to " + element.getText());
 		moveToElement(Browser.driver(), element);
 	}
 }
