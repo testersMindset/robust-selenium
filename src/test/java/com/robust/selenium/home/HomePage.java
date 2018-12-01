@@ -3,6 +3,8 @@ package com.robust.selenium.home;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.robust.selenium.configs.Page;
 
@@ -11,6 +13,8 @@ public class HomePage extends Page {
 	public HomePage(WebDriver driver) {
 		super(driver);
 	}
+
+	static Logger log = LoggerFactory.getLogger(HomePage.class);
 
 	/**
 	 * add element with @FindBy annotations. eg:
@@ -128,10 +132,9 @@ public class HomePage extends Page {
 		case "gift cards":
 			return giftCardsLink;
 		default:
-			System.out.println("NO VALID LINK PROVIDED >>> '" + linkName + "' is INVALID.");
+			log.info("Link '" + linkName + "' is invalid choice.");
 			return null;
 		}
 
 	}
-
 }

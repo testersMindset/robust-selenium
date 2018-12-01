@@ -5,6 +5,8 @@ import java.util.Map;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.robust.selenium.common.SeleniumHelper;
 import com.robust.selenium.configs.Browser;
@@ -15,7 +17,9 @@ import cucumber.api.java.en.When;
 public class RegisterPageImpl {
 
 	WebDriver driver = Browser.driver();
-
+	
+	static Logger log = LoggerFactory.getLogger(RegisterPageImpl.class);
+	
 	@When("^I land into Register page$")
 	public void validateRegisterPageLanding() {
 		Assert.assertTrue(driver.getCurrentUrl().contains("/register"));
