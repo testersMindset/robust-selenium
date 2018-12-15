@@ -18,6 +18,7 @@ public class CucumberHooks {
 	@Before
 	public void initialize() {
 		driver.get("http://demo.nopcommerce.com");
+		driver.manage().window().maximize();
 	}
 
 	@After

@@ -1,6 +1,6 @@
 Feature: Test ability to checkout cart added item
 
-   @modelTest
+   #@modelTest
   Scenario Outline: select dropdown options validations
     Given I am landed into home page
     Then I select '<firstItem>' link from '<secondItem>' on Home Page

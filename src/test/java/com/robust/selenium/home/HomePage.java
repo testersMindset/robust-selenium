@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.robust.selenium.common.SeleniumHelper;
 import com.robust.selenium.configs.Page;
 
 public class HomePage extends Page {
@@ -81,19 +82,19 @@ public class HomePage extends Page {
 	private WebElement giftCardsLink;
 
 	public WebElement registerLink() {
-		return registerLink;
+		return SeleniumHelper.waitForElementToBeClickable(registerLink);
 	}
 
 	public WebElement computersLink() {
-		return computersLink;
+		return SeleniumHelper.waitForElementToBeClickable(computersLink);
 	}
 
 	public WebElement currencySelect() {
-		return currencySelect;
+		return SeleniumHelper.waitForElementToBeClickable(currencySelect);
 	}
 
 	public WebElement headerLogo() {
-		return headerLogo;
+		return SeleniumHelper.waitForElementToBeDisplayed(headerLogo);
 	}
 
 	public WebElement getLinkOfElement(String linkName) {
