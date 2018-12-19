@@ -29,3 +29,10 @@ Feature: Test ability to checkout cart added item
     Then I am landed into clothing page
     Then I add cart to Levi
     Then I navigate to the cart page
+
+     @modelTest
+  Scenario: select dropdown options validations
+    Given I am landed into home page
+    Then I select 'Desktops' link from 'Computers' on Home Page
+    Then I add cart to Lenovo Desktop
+  
