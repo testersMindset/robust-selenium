@@ -14,8 +14,8 @@ import cucumber.api.junit.Cucumber;
 					monochrome = true, 
 					features = "src/test/resources/cucumberFeatures", 
 					glue = {"com.robust" }, 
-//					tags = { "@runTest, @regressionTest, @modelTest" })
-					tags = { "@modelTest" })
+					tags = { "@runTest, @regressionTest, @modelTest" })
+
 
 public class RunCucumberTest {
 	/**
