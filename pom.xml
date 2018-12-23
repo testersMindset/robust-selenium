@@ -121,7 +121,7 @@
 				<version>3.0.0-M3</version>
 				<configuration>
 					<includes>
-						<include>Sample.java</include>
+						<include>RunCucumberTest.java</include>
 					</includes>
 				</configuration>
 			</plugin>
