@@ -2,32 +2,31 @@ package com.robust.common.utils;
 
 import java.io.FileInputStream;
 import java.util.Properties;
-import java.util.ResourceBundle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class PropertiesReader {
 
 	private static Logger log = LoggerFactory.getLogger(PropertiesReader.class);
-	public static final String PROPERTY_FILEPATH = "config";
+	public static final String PROPERTY_FILEPATH = "./testdata/config.properties";
 
 	public static String getValue(String key) {
-		log.info("Loading from property..");
-		ResourceBundle resource = ResourceBundle.getBundle(PROPERTY_FILEPATH);
-		return resource.getString(key);
-
+		Properties prop = loadProperties();
+		return prop.getProperty(key);
 	}
 
-	public static void load() {
+	private static Properties loadProperties() {
 		log.info("Loading from property..");
 		Properties prop = new Properties();
 		try {
 			FileInputStream fis = new FileInputStream(PROPERTY_FILEPATH);
 			prop.load(fis);
-			fis.close();
+			log.info("successfully data loaded from property..");
+			return prop;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
 
 }

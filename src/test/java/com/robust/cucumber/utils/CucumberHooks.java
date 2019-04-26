@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.robust.common.utils.PropertiesReader;
 import com.robust.selenium.configs.Browser;
 
 import cucumber.api.java.After;
@@ -17,7 +16,6 @@ public class CucumberHooks {
 
 	@Before
 	public void initialize() {
-		PropertiesReader.load();
 		driver.get("http://demo.nopcommerce.com");
 		driver.manage().window().maximize();
 	}
