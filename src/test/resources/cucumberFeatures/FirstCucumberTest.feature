@@ -1,9 +1,20 @@
 Feature: Title of your feature I want to use this template for my feature file
 
   @runTest
-  Scenario: launch browser test
+  Scenario Outline: launch browser test
     Given I am landed into home page
     And currency is selected as 'Euro'
+    And I click to the Register Link
+
+    Examples: 
+      | Cur       | Gender | Day | Month    | Year | Name   | Last   | Email                      |
+      | Euro      | male   |  12 | January  | 1923 | Robert | Kasper | abcd@testWithCucumber.com  |
+      | US Dollar | female |  20 | February | 1978 | Jenny  | Pierce | xyzzd@testWithCucumber.com |
+      | Euro      | male   |  12 | January  | 1923 | Robert | Kasper | abcd@testWithCucumber.com  |
+      | US Dollar | female |  20 | February | 1978 | Jenny  | Pierce | xyzzd@testWithCucumber.com |
+      | Euro      | male   |  12 | January  | 1923 | Robert | Kasper | abcd@testWithCucumber.com  |
+      | US Dollar | female |  20 | February | 1978 | Jenny  | Pierce | xyzzd@testWithCucumber.com |
+
 
   @regressionTest
   Scenario Outline: select dropdown options validations

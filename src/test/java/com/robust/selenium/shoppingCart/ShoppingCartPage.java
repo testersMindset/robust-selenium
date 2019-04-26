@@ -21,7 +21,7 @@ public class ShoppingCartPage extends Page {
 	private WebElement qtyInput;
 
 	public WebElement qtyInput() {
-		return SeleniumHelper.waitForElementToBeDisplayed(qtyInput);
+		return SeleniumHelper.waitForElementToBeClickable(qtyInput);
 	}
 
 	public WebElement UpdateCartIcon() {
