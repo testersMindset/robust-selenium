@@ -38,8 +38,8 @@ public class Browser {
 	/*
 	 * public static WebDriver driverThruJsonFile() {
 	 * log.info("launching browser .. "); 
-	 * JSONFileReader.getJSONConfigData(); String
-	 * launchMode = DataStore.getJsonObject().getString("browserMode"); 
+	 * JSONFileReader.getJSONConfigData();
+	 * String launchMode = DataStore.getJsonObject().getString("browserMode"); 
 	 * if (webDriver == null) 
 	 * 		{ System.setProperty("webdriver.chrome.driver", ./Drivers/chromedriver.exe"); 
 	 * 		webDriver = "headless".equalsIgnoreCase(launchMode) 
