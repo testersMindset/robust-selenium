@@ -7,18 +7,18 @@ import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.robust.common.utils.PropertiesReader;
 
 public class Browser {
 
 	private static WebDriver webDriver;
 	static Logger log = LoggerFactory.getLogger(Browser.class);
-	
+
 	public static WebDriver driver() {
 		log.info("launching browser .. ");
+		String launchMode = System.getProperty("browser.launchmode");
 		if (webDriver == null) {
 			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
-			webDriver = PropertiesReader.getValue("browser.launchmode").equalsIgnoreCase("headless")
+			webDriver = "headless".equalsIgnoreCase(launchMode) 
 					? new PhantomJSDriver(getDesiredCapabilities())
 					: new ChromeDriver();
 		}
@@ -31,6 +31,7 @@ public class Browser {
 
 	/**
 	 * set capabilities for headless browser
+	 * 
 	 * @return
 	 */
 	public static DesiredCapabilities getDesiredCapabilities() {
