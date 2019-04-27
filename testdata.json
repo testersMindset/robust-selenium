@@ -1,0 +1,27 @@
+{
+	"browserMode": "headless",
+	
+	"available browsers": [
+		"chrome",
+		"ie",
+		"firefox"
+	],
+	
+	"environments": {
+		"dev1": {
+			"url": "abcd",
+			"username": "username",
+			"pw": "password"
+		},
+		"dev2": {
+			"url": "abcd",
+			"username": "username",
+			"pw": "password"
+		},
+		"dev3": {
+			"url": "abcd",
+			"username": "username",
+			"pw": "password"
+		}
+	}
+}
