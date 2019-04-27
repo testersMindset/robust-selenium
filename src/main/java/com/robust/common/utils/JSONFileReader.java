@@ -3,6 +3,9 @@ package com.robust.common.utils;
 import java.io.File;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import com.robust.backend.services.Endpoints;
+
 import io.restassured.internal.support.FileReader;
 
 public class JSONFileReader {
@@ -43,6 +46,8 @@ public class JSONFileReader {
 		return null;
 	}
 
-	
-	
+
+		public static void main(String[] args) {
+			System.out.println(Endpoints.getEndpoint("DOWNLOAD_FILE"));
+		}
 }
