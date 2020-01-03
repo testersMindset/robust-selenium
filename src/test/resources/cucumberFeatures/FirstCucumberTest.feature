@@ -1,4 +1,4 @@
-Feature: Title of your feature I want to use this template for my feature file
+ Feature: Title of your feature I want to use this template for my feature file
 
   @runTest
   Scenario Outline: launch browser test
