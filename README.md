@@ -1,6 +1,9 @@
 # robust-selenium
 Selenium Automation
 
+- updated new chromedriver version to - 81
+- repo already has drivers installed, if you clone this project, ensure you have chrome browser 81 version installed. 
+
 To successfully run test, please download 
 
 1) Most current version of java and set preference to your workspace with latest version of java.
