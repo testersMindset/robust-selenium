@@ -16,20 +16,20 @@
       | US Dollar | female |  20 | February | 1978 | Jenny  | Pierce | xyzzd@testWithCucumber.com |
 
 
-  @regressionTest
+  @regressionTest @registrationTest
   Scenario Outline: select dropdown options validations
     Given I am landed into home page
     And currency is selected as '<Cur>'
     And I click to the Register Link
     Then I land into Register page
     And I fill in register info with below values:
-      | gender     | <Gender> |
-      | birthDay   | <Day>    |
-      | birthMonth | <Month>  |
-      | birthYear  | <Year>   |
-      | firstName  | <Name>   |
-      | lastName   | <Last>   |
-      | email      | <Email>  |
+      | Gender | <Gender> |
+      | Day    | <Day>    |
+      | Month  | <Month>  |
+      | Year   | <Year>   |
+      | Name   | <Name>   |
+      | Last   | <Last>   |
+      | Email  | <Email>  |
     Then I click to computers link
 
     Examples: 

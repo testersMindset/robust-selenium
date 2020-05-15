@@ -30,17 +30,17 @@ public class RegisterPageImpl {
 		RegisterPage reg = new RegisterPage(driver);
 		SeleniumHelper.waitForElementToBeClickable(reg.genderFemaleRadio());
 
-		if (map.get("gender").equalsIgnoreCase("female")) {
+		if (map.get("Gender").equalsIgnoreCase("female")) {
 			reg.genderFemaleRadio().click();
 		} else {
 			reg.genderMaleRadio().click();
 		}
-		SeleniumHelper.selectFromDropdownByVisibleText(reg.selectBirthDay(), map.get("birthDay"));
-		SeleniumHelper.selectFromDropdownByVisibleText(reg.selectBirthMonth(), map.get("birthMonth"));
-		SeleniumHelper.selectFromDropdownByVisibleText(reg.selectBirthYear(), map.get("birthYear"));
-		reg.firstName().sendKeys(map.get("firstName"));
-		reg.lastName().sendKeys(map.get("lastName"));
-		reg.email().sendKeys(map.get("email"));
+		SeleniumHelper.selectFromDropdownByVisibleText(reg.selectBirthDay(), map.get("Day"));
+		SeleniumHelper.selectFromDropdownByVisibleText(reg.selectBirthMonth(), map.get("Month"));
+		SeleniumHelper.selectFromDropdownByVisibleText(reg.selectBirthYear(), map.get("Year"));
+		reg.firstName().sendKeys(map.get("Name"));
+		reg.lastName().sendKeys(map.get("Last"));
+		reg.email().sendKeys(map.get("Email"));
 		// fake registering.
 		reg.registerButton().click();
 		Assert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("Password is required."));

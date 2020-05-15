@@ -1,0 +1,13 @@
+TestCaseID,Currency,Gender,Day,Month,Year,Name,Last,Email
+A_001,Euro,female,12,January,1950,Jennifer,Lopez,abcd@testWithCucumber.com
+A_002,US Dollar,male,10,February,1990,Enrique ,Iglesias,abcd@testWithCucumber.com
+A_003,US Dollar,male,15,March,1975,Pierce,Johns,abcd@testWithCucumber.com
+A_004,US Dollar,male,16,April,1946,Jacob,Ractor,abcd@testWithCucumber.com
+A_005,Euro,male,20,May,1965,Arland,Terry,abcd@testWithCucumber.com
+A_006,Euro,male,21,June,1999,Bob,Marley,abcd@testWithCucumber.com
+A_007,Euro,male,4,July,2010,Rob,Stewart,abcd@testWithCucumber.com
+A_008,US Dollar,male,1,August,1980,Jacson,Herrit,abcd@testWithCucumber.com
+A_009,US Dollar,female,11,September,1966,Jessi,Bakers,abcd@testWithCucumber.com
+A_010,Euro,male,7,October,1997,Benson,Herry,abcd@testWithCucumber.com
+A_011,Euro,male,8,November,1996,Karl,Marks,abcd@testWithCucumber.com
+A_001,Euro,female,12,January,1998,Britney,Lens,abcd@testWithCucumber.com
