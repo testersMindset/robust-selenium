@@ -1,8 +1,12 @@
 # robust-selenium
 Selenium Automation
 
-- updated new chromedriver version to - 81
-- repo already has drivers installed, if you clone this project, ensure you have chrome browser 81 version installed. 
+UPDATE:: Version 85.0.4183.83 (Official Build) (64-bit) Chrome Driver has been uploaded.
+To Execute test successfully in chrome, please have your latest chrome browser downloaded.
+
+** ChromeDriver is part of the repo, you don't need to download.
+
+
 
 To successfully run test, please download 
 
@@ -12,7 +16,5 @@ To successfully run test, please download
 4) This project is built on Maven, so all required JARS are sent thru adding artifacts in POM.XML file., 
 
 ****** YOU DO NOT HAVE TO DOWNLOAD ANY JARS IN ORDER TO RUN TEST IN THIS PROJECT. **********
-
 ****** YOU DO NOT NEED TO MANUALLY ADD ANY JARS OR LIBRARIES THRU BUILDPATH TO YOUR WORKSPACE. *********
-
 ****** IF YOU BELIEVE ANY JARS ARE NEEDED TO BE ADDED, THEY SHOULD BE ONLY ADDED THRU MAVEN ARTIFACT IN POM.XML ********
