@@ -8,3 +8,5 @@ target/
 /target/**
 /.classpath
 .bin
+/.idea/
+/.iml/
